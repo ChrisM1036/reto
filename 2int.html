@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seguros - Captación de Leads</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        
+.fondo-codigo {
+  background-image: url('código-de-imagen.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.2;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+header {
+    background-color: #f4f4f4;
+    padding: 20px;
+    text-align: center;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input, select, textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+    </style>
+    
+</head>
+<body>
+    <header>
+        <h1>Seguros - Captación de Leads</h1>
+    </header>
+    <main>        
+        <form id="leadForm">
+            <input type="text" id="nombre" placeholder="Nombre completo" required>
+            <input type="email" id="correo" placeholder="Correo electrónico" required>
+            <input type="tel" id="telefono" placeholder="Teléfono" required>
+            <input type="number" id="edad" placeholder="Edad" min="18" max="100" required>
+            <select id="categoria">
+                <option value="">Seleccione categoría</option>
+                <option value="auto">Auto</option>
+                <option value="salud">Salud</option>
+                <option value="vivienda">Vivienda</option>
+            </select>
+            <textarea id="comentario" placeholder="Mensaje o comentario adicional"></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </main>
+    <script>
+        document.getElementById('leadForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const nombre = document.getElementById('nombre').value;
+    const correo = document.getElementById('correo').value;
+    const telefono = document.getElementById('telefono').value;
+    const edad = document.getElementById('edad').value;
+    const categoria = document.getElementById('categoria').value;
+    const comentario = document.getElementById('comentario').value;
+
+    alert(`Gracias por tu interés en nuestros seguros!\n\nDatos proporcionados:\nNombre: ${nombre}\nCorreo: ${correo}\nTeléfono: ${telefono}\nEdad: ${edad}\nCategoría: ${categoria}\nComentario: ${comentario}`);
+});
+</script>
+    <script src="script.js"></script>
+</body>
+</html>
